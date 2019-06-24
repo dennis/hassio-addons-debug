@@ -1,0 +1,28 @@
+{
+  "name": "HAT: MIBCS **DO NOT USE**",
+  "version": "0.40",
+  "slug": "hat-mibcs",
+  "url": "https://www.github.com/dennis/hat/",
+  "description": "Integration with Xiaomi MIBCS",
+  "arch": ["amd64", "armhf"],
+  "startup": "before",
+  "boot": "auto",
+  "full_access": true,
+  "host_network": true,
+  "kernel_modules": true,
+  "image": "dennismp/hassio-hat-mibcs-{arch}",
+  "options": {
+    "mqtt_host": "127.0.0.1",
+    "mqtt_port": 1883,
+    "mqtt_username": "hat",
+    "mqtt_password": "hat",
+    "mqtt_topic": "hat"
+  },
+  "schema": {
+    "mqtt_host": "str",
+    "mqtt_port": "int(1,)",
+    "mqtt_username": "str",
+    "mqtt_password": "str",
+    "mqtt_topic": "str"
+  }
+}
